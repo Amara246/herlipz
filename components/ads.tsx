@@ -9,24 +9,6 @@ const ADSTERRA_CONTAINER = 'container-edf43554d0782f3da6924f7a46818716'
 const ADCASH_ZONE = '12147686'
 
 export function AdsterraNative() {
-  useEffect(() => {
-    const container = document.getElementById(ADSTERRA_CONTAINER)
-    if (!container) return
-
-    const keepOnlyFirstAd = () => {
-      const children = Array.from(container.children) as HTMLElement[]
-      children.forEach((child, index) => {
-        child.style.display = index === 0 ? '' : 'none'
-      })
-    }
-
-    const observer = new MutationObserver(keepOnlyFirstAd)
-    observer.observe(container, { childList: true })
-    keepOnlyFirstAd()
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section className="top-ad" aria-label="Advertisement">
       <div id={ADSTERRA_CONTAINER} className="adsterra-single-ad" />

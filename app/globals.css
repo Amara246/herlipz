@@ -6,7 +6,8 @@ html,body { margin:0; min-height:100%; background:var(--black); }
 body { color:var(--white); font-family:Arial,Helvetica,sans-serif; overflow-x:hidden; }
 a { color:inherit; }
 .site-shell { width:min(100%,1200px); margin:0 auto; padding:26px 18px 42px; background:var(--black); }
-.top-ad { width:100%; min-height:90px; margin-bottom:34px; overflow:hidden; }
+.top-ad { width:100%; height:320px; max-height:320px; margin-bottom:34px; overflow:hidden; }
+.adsterra-single-ad { width:100%; height:320px; max-height:320px; overflow:hidden; }
 .brand-header { display:flex; justify-content:center; margin:0 auto 34px; }
 .brand-wordmark { color:var(--pink); font-family:"Brush Script MT","Segoe Script",cursive; font-size:clamp(5rem,15vw,11rem); font-weight:700; line-height:.8; letter-spacing:-.06em; white-space:nowrap; }
 .brand-heart { display:inline-block; font-family:Arial,sans-serif; font-size:.78em; font-weight:300; margin-left:.08em; transform:translateY(-.03em) scaleY(1.25); }
@@ -26,6 +27,7 @@ a { color:inherit; }
 .footer-hearts { margin-top:18px; color:var(--pink); font-size:32px; letter-spacing:8px; }
 @media (max-width:640px) {
  .site-shell { padding:18px 8px 28px; }
+ .top-ad, .adsterra-single-ad { height:285px; max-height:285px; }
  .top-ad { margin-bottom:22px; }
  .brand-header { margin-bottom:24px; }
  .brand-wordmark { font-size:clamp(4.4rem,22vw,7.2rem); }

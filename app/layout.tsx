@@ -1,6 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <Script id="aclib" src="https://acscdn.com/script/aclib.js" strategy="beforeInteractive" />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

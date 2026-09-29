@@ -17,7 +17,10 @@ function loadAdsterra(hostId: string, key: string) {
 
   const invokeScript = document.createElement('script')
   invokeScript.src = `https://www.highrevenueformat.com/${key}/invoke.js`
-  invokeScript.async = true
+  invokeScript.async = false
+  invokeScript.onload = () => {
+    host.dataset.loaded = 'true'
+  }
   host.appendChild(invokeScript)
 }
 

@@ -1,4 +1,4 @@
-import { AdcashBanner, AdsterraNative } from '@/components/ads'
+import { AdsterraBottom, AdsterraNative } from '@/components/ads'
 import { Gallery } from '@/components/gallery'
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
 
       <Gallery />
 
-      <AdcashBanner />
+      <AdsterraBottom />
 
       <footer className="site-footer">
         <p>© 2026 HerLipz. All rights reserved.</p>

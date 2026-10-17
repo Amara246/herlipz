@@ -28,7 +28,7 @@ var atOptions = {
       frameBorder="0"
       scrolling="no"
       style={{ display: 'block', width: '320px', height: '50px', border: 0 }}
-      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+      sandbox="allow-scripts allow-same-origin"
     />
   )
 }

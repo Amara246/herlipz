@@ -15,7 +15,7 @@ a { color:inherit; }
 .velma-feature { width:min(64%,700px); margin:0 auto 12px; }
 .cosplay-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; align-items:start; }
 .cosplay-column { display:flex; flex-direction:column; gap:0; min-width:0; }
-.cosplay-image { display:block; width:100%; height:auto; object-fit:contain; }
+.cosplay-image { display:block; width:100%; aspect-ratio:4/5; min-height:0; background:#080808; object-fit:cover; object-position:center; border:1px solid #292929; }
 .social-links { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:34px; padding:34px 5px 28px; text-align:center; }
 .social-links a { display:flex; flex-direction:column; align-items:center; text-decoration:none; line-height:1.05; }
 .social-platform { color:var(--pink); font-weight:900; font-size:clamp(1rem,2.35vw,1.9rem); }

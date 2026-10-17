@@ -1,3 +1,5 @@
+'use client'
+
 const FALLBACK_IMAGE = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7159-bm2KCWCSyQelGmTM2LMtMIVHdQu8TA.png'
 
 const photo = {
@@ -11,7 +13,20 @@ const photo = {
 }
 
 function CosplayImage({ src, alt }: { src: string; alt: string }) {
-  return <img src={src} alt={alt} className="cosplay-image" loading="lazy" />
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="cosplay-image"
+      loading={alt === 'Velma cosplay' ? 'eager' : 'lazy'}
+      decoding="async"
+      onError={(event) => {
+        const image = event.currentTarget
+        image.onerror = null
+        image.src = FALLBACK_IMAGE
+      }}
+    />
+  )
 }
 
 export function Gallery() {

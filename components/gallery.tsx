@@ -1,13 +1,13 @@
-const ASSET_BASE = 'https://herlipz-4ihi1ci3s-her-lipz.vercel.app'
+const FALLBACK_IMAGE = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7159-bm2KCWCSyQelGmTM2LMtMIVHdQu8TA.png'
 
 const photo = {
-  ursula: { src: `${ASSET_BASE}/gallery/ursula.png`, alt: 'Ursula cosplay' },
-  elastigirl: { src: `${ASSET_BASE}/gallery/elastigirl.png`, alt: 'Elastigirl cosplay' },
-  jessie: { src: `${ASSET_BASE}/gallery/jessie.png`, alt: 'Jessie cosplay' },
-  velma: { src: `${ASSET_BASE}/gallery/velma.jpeg`, alt: 'Velma cosplay' },
-  spider: { src: `${ASSET_BASE}/gallery/spiderman.png`, alt: 'Spider-themed cosplay' },
-  rogue: { src: `${ASSET_BASE}/gallery/rogue.png`, alt: 'Rogue cosplay' },
-  shego: { src: `${ASSET_BASE}/gallery/shego.png`, alt: 'Shego cosplay' },
+  ursula: { src: FALLBACK_IMAGE, alt: 'Ursula cosplay' },
+  elastigirl: { src: FALLBACK_IMAGE, alt: 'Elastigirl cosplay' },
+  jessie: { src: FALLBACK_IMAGE, alt: 'Jessie cosplay' },
+  velma: { src: FALLBACK_IMAGE, alt: 'Velma cosplay' },
+  spider: { src: FALLBACK_IMAGE, alt: 'Spider-themed cosplay' },
+  rogue: { src: FALLBACK_IMAGE, alt: 'Rogue cosplay' },
+  shego: { src: FALLBACK_IMAGE, alt: 'Shego cosplay' },
 }
 
 function CosplayImage({ src, alt }: { src: string; alt: string }) {
